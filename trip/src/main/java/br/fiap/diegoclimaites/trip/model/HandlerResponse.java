@@ -1,4 +1,4 @@
-package model;
+package br.fiap.diegoclimaites.trip.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

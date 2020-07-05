@@ -1,4 +1,4 @@
-package model;
+package br.fiap.diegoclimaites.trip.model;
 
 import java.util.Map;
 

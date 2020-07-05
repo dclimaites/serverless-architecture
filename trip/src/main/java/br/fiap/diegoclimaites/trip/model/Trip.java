@@ -1,4 +1,4 @@
-package dto;
+package br.fiap.diegoclimaites.trip.model;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
