@@ -24,6 +24,7 @@ mvn install
 
 ### Running the dynamodb (with docker) on:
 <b>Linux</b>: docker run -p 8000:8000 -v $(pwd)/local/dynamodb:/data/ amazon/dynamodb-local -jar DynamoDBLocal.jar -sharedDb -dbPath /data
+</ br>
 <b>Windows</b>: docker run -p 8000:8000 -v //c/databases/dynamodb/trip/dynamodb:/data/ amazon/dynamodb-local -jar DynamoDBLocal.jar -sharedDb -dbPath /data
 
 ### Creating the table Trip on DynamoDB Service
