@@ -4,4 +4,5 @@ D:\Workspaces\Git\35scj\Serverless\serverless-architecture\trip\src\main\java\br
 D:\Workspaces\Git\35scj\Serverless\serverless-architecture\trip\src\main\java\br\fiap\diegoclimaites\trip\dao\DynamoDBManager.java
 D:\Workspaces\Git\35scj\Serverless\serverless-architecture\trip\src\main\java\br\fiap\diegoclimaites\trip\model\HandlerResponse.java
 D:\Workspaces\Git\35scj\Serverless\serverless-architecture\trip\src\main\java\br\fiap\diegoclimaites\trip\dao\TripRepository.java
+D:\Workspaces\Git\35scj\Serverless\serverless-architecture\trip\src\main\java\br\fiap\diegoclimaites\trip\handler\GetTripRecordByCountryFunction.java
 D:\Workspaces\Git\35scj\Serverless\serverless-architecture\trip\src\main\java\br\fiap\diegoclimaites\trip\model\HandlerRequest.java

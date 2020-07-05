@@ -21,9 +21,9 @@ public class GetTripRecordByPeriodFunction implements RequestHandler<HandlerRequ
         context.getLogger().log("Procurando viagens entre " + starts + " e " + ends);
         final List<Trip> trips = this.repository.findByPeriod(starts, ends);
 
-        if(trips == null || trips.isEmpty()) {
-            return HandlerResponse.builder().setStatusCode(404).build();
-        }
+//        if(trips == null || trips.isEmpty()) {
+//            return HandlerResponse.builder().setStatusCode(404).build();
+//        }
 
         return HandlerResponse.builder().setStatusCode(200).setObjectBody(trips).build();
     }

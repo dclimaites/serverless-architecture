@@ -7,7 +7,7 @@
 		"ENDPOINT_OVERRIDE": "http://192.168.15.6:8000",
 		"TABLE_NAME": "trip"
 	},
-	"GetTripRecordsByCountryAndCityFunction": {
+	"GetTripRecordByCountryFunction": {
 		"ENDPOINT_OVERRIDE": "http://192.168.15.6:8000",
 		"TABLE_NAME": "trip"
 	}
