@@ -41,10 +41,12 @@ mvn install
  - On Windows: `sam local start-api --env-vars src/test/resources/test_environment_windows.json`
  - On Linux: `sam local start-api --env-vars src/test/resources/test_environment_linux.json`
  
+ <p>
  OBS:  If you already have the container locally (in your case the java8), then you can use --skip-pull-image to remove the download.
- </ br>
+ </p>
+ <p>
  <b>OBS 2: At first time i tried to build this project, i tried to use localhost in the file test_environment_windows.json, but for me, it doens't worked. So i used my IP (cmd -> ipconfig) e workly fine instead localhost.</b>
-
+</p>
 If the previous command ran successfully you should now be able to hit the following local endpoint to
 invoke the functions rooted at `http://localhost:3000/trips/{contry}?starts=2020-01-02&ends=2020-02-02`.
 It shoud return 404. Now you can explore all endpoints, use the src/test/resources/Trips.postman_collection.json to import a API Rest Collection into Postman.
