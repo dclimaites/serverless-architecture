@@ -12,7 +12,7 @@ import java.util.List;
 public class GetTripRecordByCountryFunction implements RequestHandler<HandlerRequest, HandlerResponse> {
     private final TripRepository repository = new TripRepository();
     @Override
-    public HandlerResponse handleRequest(HandlerRequest handlerRequest, Context context) {
+    public HandlerResponse handleRequest(final HandlerRequest handlerRequest,final Context context) {
         final String country = handlerRequest.getPathParameters().get("country");
 
         context.getLogger().log("Procurando registros pelo país " + country);

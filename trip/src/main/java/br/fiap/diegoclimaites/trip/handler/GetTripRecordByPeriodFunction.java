@@ -14,7 +14,7 @@ public class GetTripRecordByPeriodFunction implements RequestHandler<HandlerRequ
     private  final TripRepository repository = new TripRepository();
 
     @Override
-    public HandlerResponse handleRequest(HandlerRequest handlerRequest, Context context) {
+    public HandlerResponse handleRequest(final HandlerRequest handlerRequest, final Context context) {
         final String starts = handlerRequest.getQueryStringParameters().get("starts");
         final String ends = handlerRequest.getQueryStringParameters().get("ends");
 

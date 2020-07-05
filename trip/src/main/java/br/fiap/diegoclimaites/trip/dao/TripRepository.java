@@ -49,4 +49,19 @@ public class TripRepository {
 
         return trips;
     }
+
+    public List<Trip> findByCountryAndCity(final String country, final String city) {
+        final Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+        eav.put(":val1", new AttributeValue().withS(country));
+        eav.put(":val2", new AttributeValue().withS(city));
+
+        final DynamoDBQueryExpression<Trip> queryExpression = new DynamoDBQueryExpression<Trip>()
+                .withKeyConditionExpression("country = :val1")
+                .withFilterExpression("contains (city, :val2)")
+                .withExpressionAttributeValues(eav);
+
+        List<Trip> trips = mapper.query(Trip.class, queryExpression);
+
+        return trips;
+    }
 }

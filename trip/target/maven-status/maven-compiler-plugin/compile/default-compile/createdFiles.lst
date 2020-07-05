@@ -7,3 +7,4 @@ br\fiap\diegoclimaites\trip\dao\DynamoDBManager.class
 br\fiap\diegoclimaites\trip\dao\TripRepository.class
 br\fiap\diegoclimaites\trip\handler\GetTripRecordByPeriodFunction.class
 br\fiap\diegoclimaites\trip\model\Trip.class
+br\fiap\diegoclimaites\trip\handler\GetTripRecordByCountryAndCityFunction.class
