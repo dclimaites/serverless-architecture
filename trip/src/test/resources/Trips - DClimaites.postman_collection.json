@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "ccb92e4e-1ba8-4486-8580-0b571a91156a",
+		"name": "Trips - DClimaites",
+		"description": "Collection para acessar ao CRUD em Rest do trabalho de Serverless Architecture do projeto Trip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createTripRecord",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\" : \"Brazil\",\r\n    \"city\" : \"São Paulo\",\r\n    \"date\" : \"2020-07-05\",\r\n    \"reason\" : \"Viagem a trabalho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/trip",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"trip"
+					]
+				},
+				"description": "Cria um registro de Trip"
+			},
+			"response": []
+		},
+		{
+			"name": "findByPeriod",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/trips?starts=2020-01-01&ends=2020-07-30",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"trips"
+					],
+					"query": [
+						{
+							"key": "starts",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "ends",
+							"value": "2020-07-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByCountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/trips/Budapeste",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"Budapeste"
+					]
+				},
+				"description": "Consulta registros por país"
+			},
+			"response": []
+		},
+		{
+			"name": "findByCountryAndCity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/trips/Brazil/?city=São Paulo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"Brazil",
+						""
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "São Paulo"
+						}
+					]
+				},
+				"description": "PEsquisa pelo país e cidade"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
