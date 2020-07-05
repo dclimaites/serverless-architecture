@@ -1,0 +1,7 @@
+br\fiap\diegoclimaites\trip\model\HandlerResponse$Builder.class
+br\fiap\diegoclimaites\trip\handler\CreateTripRecord.class
+br\fiap\diegoclimaites\trip\model\HandlerResponse.class
+br\fiap\diegoclimaites\trip\model\HandlerRequest.class
+br\fiap\diegoclimaites\trip\dao\DynamoDBManager.class
+br\fiap\diegoclimaites\trip\dao\TripRepository.class
+br\fiap\diegoclimaites\trip\model\Trip.class
