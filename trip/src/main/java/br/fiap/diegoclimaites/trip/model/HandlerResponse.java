@@ -65,7 +65,7 @@ public class HandlerResponse {
 		}
 
 		/**
-		 * Builds the {@link br.com.iwe.model.HandlerResponse} using the passed raw body string.
+		 * Builds the {@link HandlerResponse} using the passed raw body string.
 		 */
 		public Builder setRawBody(String rawBody) {
 			this.rawBody = rawBody;
@@ -73,7 +73,7 @@ public class HandlerResponse {
 		}
 
 		/**
-		 * Builds the {@link br.com.iwe.model.HandlerResponse} using the passed object body
+		 * Builds the {@link HandlerResponse} using the passed object body
 		 * converted to JSON.
 		 */
 		public Builder setObjectBody(Object objectBody) {
@@ -82,7 +82,7 @@ public class HandlerResponse {
 		}
 
 		/**
-		 * Builds the {@link br.com.iwe.model.HandlerResponse} using the passed binary body
+		 * Builds the {@link HandlerResponse} using the passed binary body
 		 * encoded as base64. {@link #setBase64Encoded(boolean)
 		 * setBase64Encoded(true)} will be in invoked automatically.
 		 */
@@ -105,7 +105,7 @@ public class HandlerResponse {
 			return this;
 		}
 
-		public br.com.iwe.model.HandlerResponse build() {
+		public HandlerResponse build() {
 			String body = null;
 			if (rawBody != null) {
 				body = rawBody;
@@ -118,7 +118,7 @@ public class HandlerResponse {
 			} else if (binaryBody != null) {
 				body = new String(Base64.getEncoder().encode(binaryBody), StandardCharsets.UTF_8);
 			}
-			return new br.com.iwe.model.HandlerResponse(statusCode, body, headers, base64Encoded);
+			return new HandlerResponse(statusCode, body, headers, base64Encoded);
 		}
 	}
 }
