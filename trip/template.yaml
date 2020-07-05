@@ -32,11 +32,11 @@ Resources:
            Path: /trip
            Method: post
            
-  GetTripRecordsByPeriodFunction:
+  GetTripRecordByPeriodFunction:
     Type: AWS::Serverless::Function
     Properties:
      CodeUri: target/trip-1.0-SNAPSHOT-jar-with-dependencies.jar
-     Handler: br.fiap.diegoclimaites.trip.handler.GetTripRecordsByPeriod::handleRequest
+     Handler: br.fiap.diegoclimaites.trip.handler.GetTripRecordByPeriodFunction::handleRequest
      Runtime: java8
      Policies:
        - DynamoDBCrudPolicy:
@@ -45,7 +45,7 @@ Resources:
        GetTripRecordsByPeriod:
          Type: Api
          Properties:
-           Path: /trip/{topic}/findByPeriod
+           Path: /trips
            Method: get
            RequestParameters:
               - method.request.querystring.starts

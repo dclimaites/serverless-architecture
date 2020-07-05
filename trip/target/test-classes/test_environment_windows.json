@@ -3,7 +3,7 @@
 		"ENDPOINT_OVERRIDE": "http://192.168.15.6:8000",
 		"TABLE_NAME": "trip"
 	},
-	"GetTripRecordsByPeriodFunction": {
+	"GetTripRecordByPeriodFunction": {
 		"ENDPOINT_OVERRIDE": "http://192.168.15.6:8000",
 		"TABLE_NAME": "trip"
 	},
