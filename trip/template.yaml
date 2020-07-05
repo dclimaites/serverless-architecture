@@ -51,22 +51,6 @@ Resources:
               - method.request.querystring.starts
               - method.request.querystring.ends
 
-#  GetTripRecordByCountryFunction:
-#    Type: AWS::Serverless::Function
-#    Properties:
-#      CodeUri: target/trip-1.0-SNAPSHOT-jar-with-dependencies.jar
-#      Handler: br.fiap.diegoclimaites.trip.handler.GetTripRecordByCountryFunction::handleRequest
-#      Runtime: java8
-#      Policies:
-#        - DynamoDBCrudPolicy:
-#            TableName: !Ref TripTable
-#      Events:
-#        GetTripRecordByCountryFunction:
-#          Type: Api
-#          Properties:
-#            Path: /trips/{country}
-#            Method: get
-
   GetTripRecordByCountryAndCityFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -126,7 +110,7 @@ Outputs:
 
     CreateTripRecordFunction:
       Description: "CreateTripRecord Lambda Function ARN"
-      Value: !GetAtt CreateTripRecord.Arn
+      Value: !GetAtt CreateTripRecordFunction.Arn
     GetTripRecordByPeriodFunction:
       Description: "GetTripRecordByPeriodFunction Lambda Function ARN"
       Value: !GetAtt GetTripRecordByPeriodFunction.Arn
